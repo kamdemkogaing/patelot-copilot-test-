@@ -32,6 +32,12 @@ const Header = () => {
                 Skills
               </a>
               <a
+                href="#experience"
+                className="hover:text-[#9CAF88] transition px-3 py-2 rounded-md"
+              >
+                Experience
+              </a>
+              <a
                 href="#projects"
                 className="hover:text-[#9CAF88] transition px-3 py-2 rounded-md"
               >
@@ -70,6 +76,12 @@ const Header = () => {
               className="block px-3 py-2 hover:bg-[#556B2F] rounded-md"
             >
               Skills
+            </a>
+            <a
+              href="#experience"
+              className="block px-3 py-2 hover:bg-[#556B2F] rounded-md"
+            >
+              Experience
             </a>
             <a
               href="#projects"

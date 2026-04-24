@@ -3,51 +3,44 @@ import { Star } from "lucide-react";
 const Skills = () => {
   const skills = [
     {
-      category: "Frontend",
+      category: "Technologien",
       items: [
-        "React",
-        "Vue.js",
+        "HTML",
+        "CSS",
         "JavaScript",
+        "React.js",
+        "Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "HTML5/CSS3",
+        "Bootstrap",
       ],
     },
     {
-      category: "Backend",
+      category: "Tools",
       items: [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "PostgreSQL",
-        "REST APIs",
-        "GraphQL",
+        "UX/UI-Design",
+        "VSCode",
+        "Scrum",
+        "JIRA",
+        "Confluence",
+        "Photoshop",
+        "ADOBE Target Test",
+        "SEA/SEO",
       ],
     },
     {
-      category: "eCommerce",
-      items: [
-        "Shopify",
-        "WooCommerce",
-        "Product Management",
-        "Conversion Optimization",
-        "Analytics",
-        "Payment Gateways",
-      ],
-    },
-    {
-      category: "Tools & DevOps",
-      items: ["Git", "Docker", "CI/CD", "AWS", "Firebase", "Webpack"],
+      category: "Support",
+      items: ["Beratung", "Analyse", "Wartung", "CRO"],
     },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-slate-900">
-      <div className="w-full px-6 sm:px-8 lg:px-16">
+    <section id="skills" className="pt-10 pb-20 bg-slate-900">
+      <div className="w-full px-4 sm:px-6 lg:px-12">
         <h2 className="text-4xl font-bold text-white mb-12 text-left">
           Skills & <span className="text-[#9CAF88]">Expertise</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
             <div
               key={index}
