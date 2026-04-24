@@ -8,7 +8,7 @@ const Hero = () => {
           <div>
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
               Full Stack Developer &{" "}
-              <span className="text-[#9CAF88]">eCommerce Manager</span>
+              <span className="text-[#9CAF88]">Senior eCommerce Manager</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Building beautiful, responsive web applications and managing
@@ -28,13 +28,15 @@ const Hero = () => {
               <Code size={40} className="text-[#9CAF88] mb-4" />
               <h3 className="text-xl font-bold mb-2">Frontend Development</h3>
               <p className="text-gray-400">
-                React, Vue, Tailwind CSS, JavaScript
+                React, Next Js, Tailwind CSS, JavaScript
               </p>
             </div>
             <div className="bg-slate-900 p-6 rounded-lg border border-[#556B2F] hover:border-[#9CAF88] transition">
               <ShoppingCart size={40} className="text-[#9CAF88] mb-4" />
               <h3 className="text-xl font-bold mb-2">eCommerce Solutions</h3>
-              <p className="text-gray-400">Shopify, WooCommerce, Magento</p>
+              <p className="text-gray-400">
+                Shopware, SelectLine, ManiacSeller
+              </p>
             </div>
           </div>
         </div>
