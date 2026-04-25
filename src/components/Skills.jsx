@@ -30,7 +30,16 @@ const Skills = () => {
     },
     {
       category: "Support",
-      items: ["Beratung", "Analyse", "Wartung", "CRO"],
+      items: [
+        "Architekturberatung",
+        "Analyse",
+        "Wartung",
+        "CRO",
+        "A/B Testing",
+        "eCommerce Lösungen",
+        "Hosting & Deployment",
+        "Designsysteme",
+      ],
     },
   ];
 

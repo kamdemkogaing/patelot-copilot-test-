@@ -7,7 +7,7 @@ const Projects = () => {
       description:
         "Mein persönliches Portfolio, das meine Arbeit als Frontend-Entwickler präsentiert.",
       tech: ["React", "Next.js", "Tailwind CSS"],
-      link: "https://portfolio.patelot.de/",
+      link: "https://patelot.de/",
       github: "#",
     },
     {
@@ -66,6 +66,14 @@ const Projects = () => {
       link: "https://www.ionos.de/domains/massen-domain-suche",
       github: "#",
     },
+    {
+      title: "Moderne Shoplösung für PrintEquipment",
+      description:
+        "maßgeschneiderte Drucklösungen und individuell bedruckbare Geschenk- und Werbeartikel.",
+      tech: ["Shopware", "JavaScript", "CSS", "SelectLine", "ManiacSeller"],
+      link: "https://shop.printequipment.de/",
+      github: "#",
+    },
   ];
 
   return (
@@ -78,41 +86,66 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-900 rounded-lg overflow-hidden border border-[#556B2F] hover:border-[#9CAF88] transition transform hover:scale-105 flex flex-col"
+              className="group relative bg-gradient-to-br from-slate-800 via-slate-900 to-black rounded-3xl overflow-hidden border border-slate-700 hover:border-[#9CAF88]/50 transition-all duration-500 transform hover:scale-[1.02] hover:-rotate-1 hover:shadow-2xl hover:shadow-[#9CAF88]/20 flex flex-col backdrop-blur-sm"
             >
-              <div className="h-40 bg-[#556B2F] opacity-30"></div>
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4 flex-1 text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, i) => (
+              {/* Animated background overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#9CAF88]/5 to-[#556B2F]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+              {/* Header with tech stack preview */}
+              <div className="relative h-32 bg-gradient-to-br from-[#556B2F]/20 via-[#9CAF88]/10 to-slate-800/30 flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-0 opacity-20">
+                  <div className="w-full h-full bg-gradient-to-br from-[#9CAF88]/10 to-[#556B2F]/10"></div>
+                </div>
+                <div className="relative z-10 flex gap-2">
+                  {project.tech.slice(0, 3).map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-[#556B2F] text-[#9CAF88] px-3 py-1 rounded-full text-sm"
+                      className="bg-gradient-to-r from-[#9CAF88]/20 to-[#556B2F]/20 text-[#9CAF88] px-3 py-1 rounded-full text-xs font-medium border border-[#9CAF88]/30 backdrop-blur-sm"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
+              </div>
+
+              <div className="relative p-6 flex flex-col flex-1">
+                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#9CAF88] transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-gray-300 mb-6 flex-1 text-sm leading-relaxed group-hover:text-gray-200 transition-colors duration-300">
+                  {project.description}
+                </p>
+
+                {/* Tech stack badges */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="bg-gradient-to-r from-[#556B2F]/20 to-[#9CAF88]/20 text-[#9CAF88] px-3 py-1 rounded-full text-xs font-medium border border-[#9CAF88]/30 hover:border-[#9CAF88] transition-all duration-300 hover:scale-105"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Action button */}
                 <div className="flex gap-4">
                   <a
                     href={project.link}
-                    className="flex items-center gap-2 text-[#9CAF88] hover:text-white transition"
+                    className="group/btn relative overflow-hidden bg-gradient-to-r from-[#9CAF88] to-[#556B2F] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#9CAF88]/30 transform hover:scale-105 flex items-center gap-2"
                   >
-                    <ExternalLink size={20} /> View Project
+                    <span className="relative z-10">View Project</span>
+                    <ExternalLink
+                      size={18}
+                      className="relative z-10 group-hover/btn:rotate-12 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#556B2F] to-[#9CAF88] opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
                   </a>
-                  {/* <a
-                    href={project.github}
-                    className="flex items-center gap-2 text-[#9CAF88] hover:text-white transition"
-                  >
-                    <Github size={20} /> Code
-                  </a> */}
                 </div>
               </div>
+
+              {/* Decorative corner */}
+              <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-[#9CAF88]/30 rounded-tr-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
