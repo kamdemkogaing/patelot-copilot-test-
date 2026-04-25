@@ -251,8 +251,8 @@ const Hero = () => {
                 <span className="text-[#9CAF88] font-bold">
                   Frontend Architect
                 </span>
-                <br className="md:hidden" />
-                <span className="md:inline hidden"> & </span>
+                <br className="" />
+                {/*  <span className="md:inline hidden"> & </span> */}
                 <span className="text-[#556B2F] font-bold">
                   E-Commerce Experte
                 </span>

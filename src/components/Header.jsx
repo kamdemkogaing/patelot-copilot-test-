@@ -24,20 +24,20 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-50 transition-all duration-300 md:mx-4 md:mt-4 md:rounded-2xl ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 md:mx-4 md:mt-4 md:rounded-2xl ${
         isScrolled
           ? "bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 shadow-2xl shadow-slate-900/20"
           : "bg-slate-900/80 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto">
-        <nav className="px-6 sm:px-8 lg:px-16">
-          <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto w-full">
+        <nav className="w-full px-4 sm:px-8 lg:px-16">
+          <div className="flex items-center justify-between h-16 w-full">
             {/* Logo Section - ganz links */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 min-w-0">
               <a
                 href="#home"
-                className="group flex items-center gap-3 hover:scale-105 transition-transform duration-300"
+                className="group flex items-center gap-3 hover:scale-105 transition-transform duration-300 min-w-0"
               >
                 <div className="relative">
                   <div className="absolute -inset-1 bg-gradient-to-r from-[#9CAF88] to-[#556B2F] rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
@@ -88,7 +88,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Button - ganz rechts */}
-            <div className="md:hidden">
+            <div className="md:hidden flex justify-end">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="group relative p-2 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-all duration-300 hover:scale-110"
